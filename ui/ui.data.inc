@@ -326,3 +326,16 @@ class RulesDataUIListInteger extends RulesDataUIListText {
     return $form;
   }
 }
+/**
+ * UI for lists of User Roles.
+ */
+class RulesDataUIListUserRoles extends RulesDataUIListText {
+   
+  public static function render($value) {
+    $value = array_intersect_key(user_roles(), $value);
+    return array(
+      'content' => array('#markup' => check_plain(implode(', ', $value))),
+      '#attributes' => array('class' => array('rules-parameter-list')),
+    );
+  }
+}
