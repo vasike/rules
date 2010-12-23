@@ -86,6 +86,11 @@ function rules_rules_core_data_info() {
       'ui class' => 'RulesDataUIListInteger',
       'wrap' => TRUE,
     ),
+   'list<userroles>' => array(
+      'label' => t('list of user roles'),
+      'ui class' => 'RulesDataUIListUserRoles',
+      'wrap' => TRUE,
+    ),
    'entity' => array(
       'label' => t('any entity'),
       'group' => t('Entity'),
