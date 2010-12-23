@@ -120,7 +120,7 @@ function rules_user_condition_info() {
       'parameter' => array(
         'account' => array('type' => 'user', 'label' => t('User')),
         'roles' => array(
-          'type' => 'list<integer>',
+          'type' => 'list<userroles>',
           'label' => t('Roles'),
           'options list' => 'entity_metadata_user_roles',
         ),
